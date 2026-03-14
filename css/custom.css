@@ -1,0 +1,17 @@
+/* 整个页面背景图 */
+body {
+    background-image: url(/img/bg.jpg);
+    background-size: cover;           /* 覆盖整个页面 */
+    background-position: center;      /* 居中显示 */
+    background-attachment: fixed;     /* 固定背景，滚动时不动 */
+    background-repeat: no-repeat;     /* 不重复 */
+}
+
+/* 文章卡片半透明（让背景图透出来） */
+#recent-posts > .recent-post-item,
+#aside-content .card-widget,
+#post {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(3px);       /* 轻微模糊效果 */
+    border-radius: 12px;              /* 圆角 */
+}
