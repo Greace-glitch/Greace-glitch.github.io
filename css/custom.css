@@ -1,17 +1,49 @@
-/* 整个页面背景图 */
+/* 背景图容器 */
 body {
-    background-image: url(/img/bg.jpg);
-    background-size: cover;           /* 覆盖整个页面 */
-    background-position: center;      /* 居中显示 */
-    background-attachment: fixed;     /* 固定背景，滚动时不动 */
-    background-repeat: no-repeat;     /* 不重复 */
+    position: relative;
+    min-height: 100vh;
 }
 
-/* 文章卡片半透明（让背景图透出来） */
-#recent-posts > .recent-post-item,
-#aside-content .card-widget,
+/* 背景图（可调透明度） */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.5;  /* 背景图透明度 */
+    z-index: -1;
+}
+
+/* 文章卡片透明度 */
+#recent-posts > .recent-post-item {
+    background: rgba(255, 255, 255, 0.9) !important;  /* 卡片背景透明度 */
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+}
+
+/* 侧边栏卡片透明度 */
+#aside-content .card-widget {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+}
+
+/* 文章页卡片透明度 */
 #post {
-    background: rgba(255, 255, 255, 0.85) !important;
-    backdrop-filter: blur(3px);       /* 轻微模糊效果 */
-    border-radius: 12px;              /* 圆角 */
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+}
+
+/* 调整头像样式 */
+.avatar-img {
+    border-radius: 50%;  /* 圆形 */
+    width: 100px;        /* 调整大小 */
+    border: 2px solid #fff; /* 白色边框 */
 }

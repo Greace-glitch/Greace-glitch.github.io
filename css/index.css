@@ -438,13 +438,6 @@ canvas:not(#ribbon-canvas),
   -ms-animation: scroll-down-effect 1.5s infinite;
   animation: scroll-down-effect 1.5s infinite;
 }
-.avatar-img {
-  -webkit-animation: avatar_turn_around 2s linear infinite;
-  -moz-animation: avatar_turn_around 2s linear infinite;
-  -o-animation: avatar_turn_around 2s linear infinite;
-  -ms-animation: avatar_turn_around 2s linear infinite;
-  animation: avatar_turn_around 2s linear infinite;
-}
 .reward-main {
   -webkit-animation: donate_effcet 0.3s 0.1s ease both;
   -moz-animation: donate_effcet 0.3s 0.1s ease both;
@@ -1178,9 +1171,9 @@ canvas:not(#ribbon-canvas),
     filter: alpha(opacity=0);
   }
   100% {
-    opacity: 0.6;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-    filter: alpha(opacity=60);
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
   }
 }
 @-webkit-keyframes ribbon_to_show {
@@ -1190,9 +1183,9 @@ canvas:not(#ribbon-canvas),
     filter: alpha(opacity=0);
   }
   100% {
-    opacity: 0.6;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-    filter: alpha(opacity=60);
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
   }
 }
 @-o-keyframes ribbon_to_show {
@@ -1202,9 +1195,9 @@ canvas:not(#ribbon-canvas),
     filter: alpha(opacity=0);
   }
   100% {
-    opacity: 0.6;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-    filter: alpha(opacity=60);
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
   }
 }
 @keyframes ribbon_to_show {
@@ -1214,9 +1207,9 @@ canvas:not(#ribbon-canvas),
     filter: alpha(opacity=0);
   }
   100% {
-    opacity: 0.6;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-    filter: alpha(opacity=60);
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
   }
 }
 @-moz-keyframes avatar_turn_around {
