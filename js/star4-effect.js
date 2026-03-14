@@ -10,7 +10,7 @@
     canvas.style.pointerEvents = 'none';
     canvas.style.zIndex = '999999';
     document.body.appendChild(canvas);
-    
+
     var ctx = canvas.getContext('2d');
     var particles = [];
     
@@ -18,10 +18,10 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     }
+    
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
     
-    // 绘制四角星星的函数
     function drawStar4(ctx, x, y, size, rotation) {
         ctx.save();
         ctx.translate(x, y);
@@ -29,7 +29,6 @@
         ctx.scale(size / 10, size / 10);
         
         ctx.beginPath();
-        // 四角星路径（两个菱形叠加）
         for (var i = 0; i < 4; i++) {
             var angle = i * 90 * Math.PI / 180;
             var x1 = Math.cos(angle) * 5;
@@ -49,10 +48,9 @@
         ctx.fill();
         ctx.restore();
     }
-    
-    // 点击事件
+
     document.addEventListener('click', function(e) {
-        var count = 12; // 星星数量
+        var count = 12;
         for (var i = 0; i < count; i++) {
             particles.push({
                 x: e.clientX,
@@ -60,32 +58,30 @@
                 vx: (Math.random() - 0.5) * 10,
                 vy: (Math.random() - 0.5) * 5 - 1,
                 size: Math.random() * 15 + 5,
-                color: 'hsl(' + (Math.random() * 60 + 30) + ', 100%, 60%)', // 金色系
+                color: 'hsla(' + (Math.random() * 60 + 30) + ', 100%, 60%, 1)',
                 life: 1,
                 rotation: Math.random() * 360,
                 rotationSpeed: (Math.random() - 0.5) * 0.2
             });
         }
     });
-    
-    // 动画循环
+
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
+
         for (var i = particles.length - 1; i >= 0; i--) {
             var p = particles[i];
-            
+
             ctx.fillStyle = p.color;
             ctx.globalAlpha = p.life;
             drawStar4(ctx, p.x, p.y, p.size, p.rotation);
-            
-            // 更新位置和生命值
+
             p.x += p.vx;
             p.y += p.vy;
-            p.vy += 0.08; // 重力
+            p.vy += 0.08;
             p.rotation += p.rotationSpeed;
             p.life -= 0.008;
-            
+
             if (p.life <= 0) {
                 particles.splice(i, 1);
             }
@@ -93,5 +89,6 @@
         
         requestAnimationFrame(animate);
     }
+    
     animate();
 })();
