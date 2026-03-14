@@ -16,7 +16,7 @@ body::before {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    opacity: 0.5;  /* 背景图透明度 */
+    opacity: 0.8;  /* 背景图透明度 */
     z-index: -1;
 }
 
@@ -46,4 +46,25 @@ body::before {
     border-radius: 50%;  /* 圆形 */
     width: 100px;        /* 调整大小 */
     border: 2px solid #fff; /* 白色边框 */
+}
+
+/* 侧边栏卡片变暗 */
+#aside-content .card-widget {
+    background: rgba(0, 60,30, 0.7) !important;  /* 黑色半透明 */
+    color: #fff !important;  /* 文字变白 */
+}
+
+/* 侧边栏标题文字变白 */
+#aside-content .card-widget .card-title {
+    color: #fff !important;
+}
+
+/* 侧边栏链接文字变浅色 */
+#aside-content .card-widget a {
+    color: #e0e0e0 !important;
+}
+
+/* 侧边栏统计数字变白 */
+#aside-content .card-widget .item-count {
+    color: #ffd700 !important;  /* 金色数字 */
 }
