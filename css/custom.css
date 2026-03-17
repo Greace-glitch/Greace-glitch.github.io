@@ -1,0 +1,132 @@
+/* 背景图容器 */
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* 背景图（可调透明度） */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+/* 文章卡片 - 浅棕色 */
+#recent-posts > .recent-post-item {
+    max-width: none !important;
+    width: auto !important;
+    display: inline-block !important;
+    min-width: 300px !important;
+    background: rgba(210, 180, 140, 0.3) !important;
+    backdrop-filter: blur(5px) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(210, 180, 140, 0.5) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+/* 让卡片内的内容自适应 */
+.recent-post-item .post-content {
+    width: auto !important;
+}
+
+/* 侧边栏卡片 - 深绿色 */
+#aside-content .card-widget {
+    background: rgba(0, 60, 30, 0.7) !important;
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+    border: 1px solid #2a5a2a;
+    color: #fff !important;
+}
+
+/* 侧边栏标题 */
+#aside-content .card-widget .card-title {
+    color: #fff !important;
+    border-bottom: 1px solid #3a7a3a;
+}
+
+/* 侧边栏链接 */
+#aside-content .card-widget a {
+    color: #e0e0e0 !important;
+}
+
+/* 侧边栏链接悬停 */
+#aside-content .card-widget a:hover {
+    color: #90ee90 !important;
+}
+
+/* 侧边栏统计数字 */
+#aside-content .card-widget .item-count {
+    color: #ffd700 !important;
+}
+
+/* 文章页卡片 */
+#post {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(3px);
+    border-radius: 12px;
+}
+
+/* 头像 */
+.avatar-img {
+    border-radius: 50%;
+    width: 100px;
+    border: 2px solid #fff;
+}
+
+/* 页脚 */
+footer {
+    background: linear-gradient(90deg, #092a2f, #134e4a) !important;
+}
+
+#footer,
+#footer a,
+#footer .copyright,
+#footer .framework-info {
+    color: #ffffff !important;
+}
+
+/* 底部友链样式 */
+.footer-friends {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-friends a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-friends a:hover {
+    color: #ffd700;
+}
+
+#footer a:hover {
+    color: #ffd700 !important;
+}
+#recent-posts>.recent-post-items .recent-post-item{
+  background: linear-gradient(-45deg, #D2B48C26, #FFFFE033, #90EE904D, #EEE8AA) !important;
+}
+[data-theme=dark] #recent-posts>.recent-post-items .recent-post-item{
+  background: rgba(139, 69, 19, 0.7) !important;
+}
+
+/* 文章标题 - 更粗 */
+.recent-post-item .post-title {
+    font-weight: 800 !important;
+}
+
+/* 文章正文 - 半粗 */
+.recent-post-item .content {
+    font-weight: 700 !important;
+}
